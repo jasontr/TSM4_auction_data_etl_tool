@@ -146,14 +146,14 @@ class Transform:
 
 
 class Load:
-    COLUMES_ORDER = [
+    COLUMNS_ORDER = [
         OriginalColumns.ItemId.raw, OriginalColumns.MinBuyout.raw, OriginalColumns.MarketValue.raw, OriginalColumns.LastScan.raw,
         OriginalColumns.ItemId.transformed, OriginalColumns.MinBuyout.transformed, OriginalColumns.MarketValue.transformed, OriginalColumns.LastScan.transformed,
         OriginalColumns.NumAuctions.raw, OriginalColumns.Quantity.raw
     ]
 
     def __init__(self, path, header=None):
-        self.header = header or self.COLUMES_ORDER
+        self.header = header or self.COLUMNS_ORDER
         self.path = path
 
     def load(self, rows: Iterable, mode='w', path=None, header: Optional[Union[Tuple, List]]=None):
